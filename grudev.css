@@ -70,7 +70,7 @@
     h1 {
       background-image: linear-gradient(
         to right var(--space), 
-        deeppink, blue
+        deeppink, red
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -89,7 +89,6 @@
 }
 
 @layer demo.support {
-
   html {
     color-scheme: dark light;
   }
