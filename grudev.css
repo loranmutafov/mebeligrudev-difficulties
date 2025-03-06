@@ -57,6 +57,23 @@
   }
 }
 
+@media (prefers-color-scheme: light) {
+  @layer demo {
+    .noise {
+      mask: repeating-radial-gradient(
+        circle at center,
+        #000,
+        var(--lines),
+        #000,
+        0,
+        #6666,
+        calc(var(--lines) * 2),
+        #6666 0
+      );
+    }
+  }
+}
+
 @layer demo.gradient-text {
   .noise {
     --space:;
@@ -77,13 +94,7 @@
     }
     
     @media (prefers-color-scheme: light) {
-      background-image: linear-gradient(
-        to right var(--space), 
-        black, gray
-      );
-      
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
   }
 }
@@ -102,22 +113,24 @@
 }
 
 body {
-    margin: 0 auto;   
-    padding: 5vh 5vw;
-    max-width: 1050px;
-    font-family: 'Open Sans';
+  margin: 0 auto;   
+  padding: 5vh 5vw;
+  max-width: 1050px;
+  font-family: 'Open Sans';
 }
 
 header {
-    text-align: center;;
+  text-align: center;;
 }
 
 img {
-    width: 300px;
+  width: 300px;
+    
+  @media (prefers-color-scheme: dark) {
     filter: brightness(9);
+  }
 }
 
 p {
-    /* text-align: center; */
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
