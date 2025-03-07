@@ -109,7 +109,6 @@
 
     display: grid;
   }
-  
 }
 
 body {
@@ -120,7 +119,7 @@ body {
 }
 
 header {
-  text-align: center;;
+  text-align: center;
 }
 
 img {
